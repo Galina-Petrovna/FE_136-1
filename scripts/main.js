@@ -1,126 +1,110 @@
-// let str = prompt();
+let str = "4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 57";
+let max = -Infinity;
+let min = Infinity;
+let bufer = "";
 
-// let rez = str
-//     ? +str[0] + +str[1] + +str[2] === +str[3] + +str[4] + +str[5]
-//         ? "Суммы равны"
-//         : "Суммы не равны"
-//     : "Ничего не введено";
-
-// if (str?.length > 0 || str) {
-//     if (+str[0] + +str[1] + +str[2] === +str[3] + +str[4] + +str[5]) {
-//         console.log("Суммы равны");
-//     } else {
-//         console.log("Суммы не равны");
-//     }
-// } else {
-//     console.log("Ничего не введено");
-// }
-
-// document.write(rez);
-
-// let day = Number(prompt()); // prompt() -> значение -> Number(значение) -> day
-
-// if (!isNaN(day)) {
-//     let year = day > 365 ? parseInt(day / 365) : "Меньше года";
-//     day %= 365; // day = day % 365
-//     let mont = day > 31 ? parseInt(day / 31) : "Меньше месяца";
-//     day %= 31;
-//     let week = day > 7 ? parseInt(day / 7) : "Меньше недели";
-//     day %= 7;
-
-//     let d = null;
-
-//     switch (mont) {
-//         case 12:
-//         case 1:
-//         case 2:
-//             d = "зима";
-//             break;
-//         case 3:
-//         case 4:
-//         case 5:
-//             d = "весна";
-//             break;
-//         case 6:
-//         case 7:
-//         case 8:
-//             d = "лето";
-//             break;
-//         case 9:
-//         case 10:
-//         case 11:
-//             d = "осень";
-//         default:
-//             d = 'зима';
-//     }
-
-//     document.write(`
-//         <table>
-//             <tr>
-//                 <td>Количество лет:</td>
-//                 <td>${year}</td>
-//             </tr>
-//             <tr>
-//                 <td>Количество месяцев:</td>
-//                 <td>${mont}</td>
-//             </tr>
-//             <tr>
-//                 <td>Количество недель:</td>
-//                 <td>${week}</td>
-//             </tr>
-//             <tr>
-//                 <td>Количество дней:</td>
-//                 <td>${day}</td>
-//             </tr>
-//             <tr>
-//                 <td>Пора года:</td>
-//                 <td>${d}</td>
-//             </tr>
-//         </table>
-//     `)
-// } else {
-//     console.log("Введено не число");
-// }
-
-
-//----
-/**
- * for
- * while
- * do..while
- */
-
-// for (let i = 0; i < 10; i++){
-//     if (i % 2 !== 0) continue;
-//     console.log(i);
-//     if (i === 8){
-//         break;
-//     }
-// }
-
-// let i = +prompt();
-// while (i){
-//     let num = i % 10; // 234 -> 230 4 -> 23
-//     i = parseInt(i / 10);
-//     console.log(num);
-// }
-
-// let rez = 0;
-
-// while (1) {
-//     let str = prompt();
-//     if (isNaN(str) || +str === 0){
-//         break;
-//     }
-//     rez += +str;
-// }
-
-// console.log(rez);
-
-while (0){
-    console.log('While');
+for (let i = 0; i < str.length; i++) {
+    if (str[i] !== " ") {
+        bufer += str[i];
+    } else {
+        bufer = Number(bufer);
+        if (max < bufer) max = bufer;
+        if (min > bufer) min = bufer;
+        bufer = "";
+    }
 }
 
-do {
-    console.log('Do..while');
-} while (0);
+console.log(`Max: ${max}`);
+console.log(`Min: ${min}`);
+
+// let num = prompt('Введите число');
+// let summ = 0;
+// let count = 0;
+// let reverce = "";
+
+// for (let i = 0; i < num.length; i++) {
+//     console.log(num[i]);
+//     summ += +num[i];
+//     count += 1;
+//     reverce = num[i] + reverce; // 123 -> 1 + '' (1) -> 2 + 1 (21) -> 3 + 21 (321)
+// }
+
+// console.log(`
+//     вводится число ${num}; 
+//     цифр в числе = ${count}; 
+//     сумма = ${summ}; 
+//     обратный порядок ${reverce}.
+// `);
+
+/**
+ * Есть некоторое в диапазоне от 0 до 100.
+ * Задача угадать это число за 7 попыток.
+ * Пользователю выводить сообщение больше или меньше заданного числа
+ */
+
+let testNum = Math.floor(Math.random() * 100);
+let counter = 0;
+
+// while (true) {
+//     if (counter >= 7) {
+//         alert(`Количество попыток израсходовано, заданное число = ${testNum}`);
+//         break;
+//     }
+
+//     let num = +prompt("Введите число от 0 до 100");
+
+//     if (num === testNum) {
+//         alert(
+//             `вы выйграли! Число попыток: ${counter}, Заданное число = ${testNum}`
+//         );
+//         break;
+//     }
+
+//     if (num > testNum) {
+//         alert(`Заданное число меньше ${num}`);
+//     } else {
+//         alert(`Заданное число больше ${num}`);
+//     }
+
+//     counter++;
+// }
+
+document.write('<div style="display: flex; gap: 40px; flex-wrap: wrap;">');
+for (let i = 1; i < 11; i++){
+    document.write('<div>');
+    for (let j = 1; j < 11; j++){
+        document.write(`${i} * ${j} = ${i * j} <br/>`);
+    }
+    document.write('</div>');
+}
+document.write('</div>');
+
+let arr = [1, 2, 3];
+
+// console.log(arr.length);
+// arr[100] = 'lol';
+// console.log(arr);
+// console.log(arr.length);
+
+/**
+ * push - позволяет добавить элемент в конец массива
+ * pop - извлечение элемента с конца массива
+ * shift - извлечь элемент из начала массива
+ * unshift - добавить в начало массива
+ * reverse - разворачивает массив
+ * join - объединяет массив в строку, при этом в качестве параметра можно передать разделитель
+ * 
+ * split - но это не метод массивов
+ * 
+ * sort - сортировка
+ * slice - позволяет нам получить под массив, в параметрах индекс начала и индекс конца
+ * splice - не безопасен, два параметра индекс начала и количество
+ */
+
+let arr2 = [234, 2, 1, 111, 123, 65, 9, 11, 34];
+
+arr2.sort(function (a, b) {
+    return b - a;
+});
+
+console.log(arr2);
