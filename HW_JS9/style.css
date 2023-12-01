@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 350px;
+    height: 100%;
+    margin: 40px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    border: 1px solid gray;
+}
+
+
+.top p {
+    width: 350px;
+    height: 50px;
+    background-color: rgb(126, 126, 240);
+    border: none;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+input {
+    font-size: 20px;
+    border: 1px solid rgba(146, 158, 129, 0.514);
+    padding: 10px 25px;
+}
+
+.todo_items {
+    list-style: none;
+    
+}
+
+.done {
+    text-decoration: line-through; 
+    color: rgba(128, 128, 128, 0.363);
+}
+
+li {
+    border: 1px solid rgba(164, 192, 199, 0.37);
+    width: 318px;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
