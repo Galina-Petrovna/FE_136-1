@@ -52,6 +52,15 @@ li {
     font-size: 28px;
 }
 
+.todo_item {
+    display: flex;
+    gap: 5px
+}
+
+span{
+    width: 318px;
+}
+
 .delete button {
     width: 250px;
     height: 30px;

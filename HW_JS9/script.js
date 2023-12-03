@@ -33,30 +33,29 @@
         let item = createToDoItem(text.value);
         text.value = '';
         todoContainer.append(item);
-
         
     });
-    
-    todoContainer.addEventListener('click', function () {
-        
+
+
+    todoContainer.addEventListener('click', function (event) {
+            
         let span = prompt ('Измени задачу');
-        if (span) {
-            document.querySelector('span').innerText = span;
-        } else {
+        if(span) {
+            event.target.innerText = span;
+        }  else {
             undefined;
         }
-        
-    });
+        });
+
 
     document.querySelector('.delete button').onclick = function (){
 
         let delete1 = confirm('Удалить все задачи?');
         if (delete1) {
             document.querySelector('.todo_items').remove();
-    } else {
-        undefined;
-    }
-
+        } else {
+            undefined;
+        }
     };
 
 })();
