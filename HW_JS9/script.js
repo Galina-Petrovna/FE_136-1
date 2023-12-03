@@ -8,6 +8,7 @@
         let li = document.createElement('li');
         li.classList.add('todo_item');
 
+        
         let check = document.createElement('input');
         check.setAttribute('type', 'checkbox');
 
@@ -24,6 +25,7 @@
 
         li.append(check, textSpan);
         return li;
+        
     }
 
     form.addEventListener('submit', (event) => {
@@ -31,6 +33,30 @@
         let item = createToDoItem(text.value);
         text.value = '';
         todoContainer.append(item);
+
+        
     });
+    
+    todoContainer.addEventListener('click', function () {
+        
+        let span = prompt ('Измени задачу');
+        if (span) {
+            document.querySelector('span').innerText = span;
+        } else {
+            undefined;
+        }
+        
+    });
+
+    document.querySelector('.delete button').onclick = function (){
+
+        let delete1 = confirm('Удалить все задачи?');
+        if (delete1) {
+            document.querySelector('.todo_items').remove();
+    } else {
+        undefined;
+    }
+
+    };
 
 })();
