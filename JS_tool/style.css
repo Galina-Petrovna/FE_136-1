@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+
+
+}
+
+.tooltip {
+    position: relative;
+    background-color: yellowgreen;
+    cursor: pointer;
+    border-bottom: 1px solid;
+}
+
+.tooltip__content {
+    position: absolute;
+    background: white;
+    border-radius: 12px;
+    padding: 12px;
+    width: 124px;
+    /* top: 0; */
+    left: -50%;
+    transform: translateX(20%);
+    box-shadow: 0 0 3px 1px rgb(63, 90, 63);
+    transition: 1.3s linear;
+}
