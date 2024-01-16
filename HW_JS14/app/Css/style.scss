@@ -1,0 +1,18 @@
+* {
+    padding: 0px;
+    margin: 0;
+
+}
+
+#root {
+    display: block;
+    padding:0, 25px, 25px, 25px;
+}
+
+@import './header';
+@import './catalog';
+@import './home';
+@import './product';
+@import './cart';
+@import './footer';
+

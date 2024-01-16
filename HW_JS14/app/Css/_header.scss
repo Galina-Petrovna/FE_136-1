@@ -1,0 +1,52 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .logo { 
+        a {
+            img {
+                width: 90px;
+                
+            }
+        }
+    }
+        
+    
+
+
+    nav {
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            text-decoration: none;
+            gap: 35px;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: black;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .cart {
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            width: 50px;
+        }
+    }
+
+}
