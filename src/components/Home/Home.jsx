@@ -1,9 +1,14 @@
 import React from "react";
+import style from "./Home.module.css";
 import Play from "./../assets/button_play.png";
-import style from "./Dashboard.module.css";
 
-const Dashboard = () => {
-    return (
+
+
+const Home = () => {
+    // return
+    //  <h1>Home page</h1>
+
+     return (
         <section className={style.dashboardContainer}>
             <div className={style.gameBlock}>
                 <p>The most popular game is <br />
@@ -21,9 +26,9 @@ const Dashboard = () => {
                 <h3>7 level</h3>
                 <p>Learn 750 new words in one course</p>
             </div>
-            <div className={style.levelBlock}></div>
+            {/* <div className={style.levelBlock}></div> */}
         </section>
     );
 }
 
-export default Dashboard;
+export default Home;
