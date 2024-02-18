@@ -11,6 +11,7 @@ const Header = () => {
                 <img className={style.img} src={Logo} alt="" />
                 <Nav />
             </header>
+            
             <Outlet /> 
         </>
     );

@@ -1,0 +1,38 @@
+.progressBar {
+    position: absolute;
+    height: 12px;
+    border-radius: 0 20px 20px 0;
+    width: 0;
+    transition: .6s;
+    background: yellow;
+}
+
+.progressBarContainer {
+    position: relative;
+    height: 12px;
+    background: white;
+    box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.35);
+
+}
+
+.btnNext {
+    transform: scale(-1, 1);
+    width: 190px;
+    margin: 100px auto;
+    cursor: pointer;
+}
+
+.btnBack, .btnNext {
+    display: block;
+    /* position: absolute; */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    height:40px;
+    width: 90px;
+    background-size: 45px;
+    margin-top: 30px;
+    margin-left: 20px;
+    background-repeat: no-repeat;
+    /* border: none; */
+    background-position: center;
+}

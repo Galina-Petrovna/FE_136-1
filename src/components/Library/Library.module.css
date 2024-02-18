@@ -1,0 +1,104 @@
+.libraryBlock > span {
+    text-align: center;
+    font-size: calc(12px + (24 - 16) * (100vw - 400px) / (800 - 400));
+}
+
+.libraryBlock {
+    display: grid;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 60px;
+}
+
+.addWordBlock {
+    display: grid;
+    grid-template-columns: 3fr auto;
+    column-gap: 30px;
+    justify-items: center;
+    margin: 60px;
+}
+
+.addWordBlock button {
+    padding: 0;
+    border: none;
+    background: none;
+    transition: .6s;
+}
+
+.addWordBlock button:focus {
+    outline: none;
+}
+
+.addWordBlock button:hover {
+    opacity: .6;
+}
+
+.addWordBlock input {
+    box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.35);
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    padding: 6px 12px;
+}
+
+.addWordBlock img:hover {
+    opacity: .6;
+    cursor: pointer;
+}
+
+/* .addWordBlock img.close {
+
+} */
+
+
+
+.wordsTable >:not(:first-child) > li {
+    z-index: 1;
+    padding: 15px 15%;
+}
+
+.settings button:hover {
+    opacity: .6;
+    background-color: white;
+}
+
+.settings button {
+    cursor: pointer;
+    transition: .6s;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+.settings button:focus {
+    outline: none;
+}
+
+
+.wordsTable > ul:not(:first-child):hover .settings {
+    opacity: 1;
+}
+
+.wordsTable h3 {
+    text-align: center;
+    width: 100%;
+}
+
+.wordsTable > ul {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: start;
+    column-gap: 30px;
+    list-style-type: none;
+}
+
+.wordsTable {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
