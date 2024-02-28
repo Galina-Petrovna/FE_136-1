@@ -4,6 +4,8 @@ import React, { useContext, useRef } from "react";
 import style from "./Library.module.css";
 import { LibraryContext } from "../../App";
 
+
+
 const Library = (props) => {
     const { setLibrary, library } = useContext(LibraryContext);
     const inputValue = useRef();
@@ -16,7 +18,12 @@ const Library = (props) => {
 
     const addNewWord = async (event) => {
         event.preventDefault()
-        const response = await fetch(`https://ftapi.pythonanywhere.com/translate?sl=ru&dl=en&text=${inputValue.current.value}`);
+        const response = await fetch(`https://ftapi.pythonanywhere.com/translate?sl=ru&dl=en&text=${inputValue.current.value}`, {
+            mode: 'no-cors',
+            headers: {
+                'Access-Control-Allow-Origin':'*'
+            }
+        });
         const translation = await response.json();
         const updateLibrary = [...library, { origin: inputValue.current.value, translate: translation['destination-text'], learn: 0 }]
         setLibrary(updateLibrary);
