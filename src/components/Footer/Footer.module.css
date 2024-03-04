@@ -1,0 +1,33 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.foot1 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+table {
+    caption-side: bottom;
+    border-collapse: collapse;
+    
+}
+
+/* .table {
+    display: inline;
+    vertical-align: bottom; 
+    vertical-align: top;
+} */
+
+.textLeft {
+    text-align: right;
+    font-weight: 700;
+
+    vertical-align: top;
+    text-align: right;
+   
+    
+
+}

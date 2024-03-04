@@ -1,0 +1,21 @@
+.form {
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+}
+
+.h1 {
+    color: blue;
+}
+
+.form2 {
+    width: 300px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    text-align: center;
+}
