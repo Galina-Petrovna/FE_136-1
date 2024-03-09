@@ -1,5 +1,6 @@
 .container {
     padding: 80px 20px;
+    /* z-index: 1; */
 }
 
 .images {
@@ -10,7 +11,8 @@
 
     gap: 20px;
     flex-wrap: wrap;
-    position: relative;
+    /* position: relative; */
+    /* z-index: 2; */
     
 }  
 
@@ -23,7 +25,7 @@
     
     top: 50%;
     left: 50%;
-    z-index: 999;
+    
     /* transform: translate(-50%, -50%); */
    
 }

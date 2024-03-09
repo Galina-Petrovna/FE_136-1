@@ -13,9 +13,9 @@ const Header = () => {
 
     const [isOpen, setOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setOpen(true);
-    }
+    // const toggleMenu = () => {
+    //     setOpen(true);
+    // }
     return (
         <>
             <header className={style.header}>
@@ -26,9 +26,9 @@ const Header = () => {
                 {/* <button>Log in</button> */}
                 {/* <img  className={style.img} src={Logo} alt="" /> */}
 
-                <button  onClick= {() =>toggleMenu(isOpen ? null : <Nav/>)}><img className={style.button}  src={Menu} alt="" /></button>
+                <button  onClick= {() =>setOpen(!isOpen)}><img className={style.button}  src={Menu} alt="" /></button>
 
-                {/* {isOpen ? null : <Nav/>} */}
+                {isOpen ??  <Nav/>}
 
 
 
