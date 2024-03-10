@@ -4,6 +4,7 @@ const initialState = {
 
 	name: '',
 	email: '',
+	tel: '',
 	message: '',
 	submitting: false,
 	submitted: false,

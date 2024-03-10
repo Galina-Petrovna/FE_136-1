@@ -4,7 +4,7 @@ import feedbackReducer from './userReducer'
 
 export const rootReducer = combineReducers({
 
-    reducer: {
+    // reducer: {
         feedback: feedbackReducer
-    }
+    // }
 });

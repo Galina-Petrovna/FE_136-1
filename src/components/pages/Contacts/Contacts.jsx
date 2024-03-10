@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 import {useDispatch, useSelector} from 'react-redux';
 import style from "./Contacts.module.css";
@@ -12,20 +12,20 @@ import { updateField, submitFeedbackStart } from "../../../store/reducers/userRe
 
 const Contacts = () => {
 	const dispatch = useDispatch();
-	const {name, email, message, submitting, submitted, error} = useSelector((state) => state.feedback);
+	const {name, email,tel, message, submitting, submitted, error} = useSelector((state) => state.feedback);
 
 	const handleChange = (e) => {
-		dispatch(updateField({name:e.target.user, value:e.target.value}));
+		dispatch(updateField({name:e.target.name, value:e.target.value}));
 	}
   
 	
 
-//   const [feedback, setFeedback] = useState('');
+//   const [user, setFeedback] = useState('');
 
    const handleSubmit = (e) => {
     e.preventDefault();
 	dispatch(submitFeedbackStart());
-    // console.log(`Feedback submitted: ${feedback}`);
+    console.log(`name: ${name} , email: ${email}, tel: ${tel}, message: ${message}`);
    }
 
 
@@ -60,10 +60,11 @@ const Contacts = () => {
     
         <form className={style.form2}  onSubmit={handleSubmit}>
 
-			<input type="text" name="name" value={name} onChange={handleChange} />
-			<input type="email" name="email" value={email} onChange={handleChange} />
-			<textarea name="message" value={message} onChange={handleChange} />
-			<button type="submit" disabled={submitting}>Submit</button>
+			<input placeholder="Ваше имя" type="text" name="name" value={name} onChange={handleChange} required />
+			<input placeholder="Ваш email" type="email" name="email" value={email} onChange={handleChange} />
+			<input placeholder="Ваш телефон" type="tel" name="tel" value={tel} onChange={handleChange} required/>
+			<textarea placeholder="Ваше сообщение" name="message" value={message} onChange={handleChange} required/>
+			<button className={style.button} type="submit" disabled={submitting}>Отправить</button>
 			{submitted && <p>Thank you</p>}
 			{error && <p>{error}</p>}
 

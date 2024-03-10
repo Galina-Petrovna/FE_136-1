@@ -1,20 +1,14 @@
 import React from "react";
 
 
+
 import { NavLink  } from "react-router-dom";
-import style from "./Nav.module.css";
+import style from "./NavMob.module.css";
 
 
-// import styled from "styled-components";
+const Navmob = () => {
 
-// const NavLink = styled(BaseNavLink)`
-//     &.active::after{
-//         color: black !important;
-//         width: 120%;
-//     }
-// `
 
-const Nav = () => {
 
     return (
         <nav className={style.nav}> 
@@ -32,4 +26,4 @@ const Nav = () => {
     );
 }
 
-export default Nav;
+export default Navmob;

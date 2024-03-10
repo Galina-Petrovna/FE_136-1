@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import style from "./Footer.module.css";
+import Map1 from "../Map/Map";
  
 
 const Footer = () => {
@@ -35,13 +36,39 @@ const Footer = () => {
 
                         </tbody>
                     </table>
-                    <div className={style.openingHours}></div>
+                    <div className={style.foot1}>
+                        <time itemProp="openingHours" dateTime="Mo-Su, 8:00 - 22:00" content="С понедельника по воскресеньеб 8: - 22:00 ">
+                            <h3>Режим работы (ежедневно):</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td className={style.textLeft}>Комплекс:</td>
+                                        <td> с 8:00 до 22:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td className={style.textLeft}>Конный клуб:</td>
+                                        <td>с 9:00 до 18:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td className={style.textLeft}>Манеж:</td>
+                                        <td>с 8:00 до 21:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td className={style.textLeft}>Бочка:</td>
+                                        <td>с 8:00 до 21:30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </time>
+                    </div>
                 </div>
 
                 <div className={style.foot2}>
-
+                    <Map1/>
                 </div>
             </div>
+
+            {/* <Map1/> */}
 
             <Outlet/>
         </>
