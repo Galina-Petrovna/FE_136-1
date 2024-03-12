@@ -1,31 +1,39 @@
-import React from "react";
-// import { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import {useDispatch, useSelector} from 'react-redux';
 import style from "./Contacts.module.css";
 
-// import { useActions } from "././../../../hooks/useActions";
 
-import { updateField, submitFeedbackStart } from "../../../store/reducers/userReducer";
+import { updateField } from "../../../store/reducers/userReducer";
 
 
 
 const Contacts = () => {
 	const dispatch = useDispatch();
-	const {name, email,tel, message, submitting, submitted, error} = useSelector((state) => state.feedback);
+	const { submitting, submitted, error} = useSelector((state) => state.feedback);
 
-	const handleChange = (e) => {
-		dispatch(updateField({name:e.target.name, value:e.target.value}));
-	}
+	const [name, setName] = useState ('');
+	const [email, setEmail] = useState ('');
+	const [tel, setTel] = useState ('');
+	const [message, setMessage] = useState ('');
+
+	// const handleChange = (e) => {
+	// 	dispatch(updateField({name, email, tel}));
+	// }
   
 	
 
-//   const [user, setFeedback] = useState('');
 
    const handleSubmit = (e) => {
     e.preventDefault();
-	dispatch(submitFeedbackStart());
+	dispatch(updateField(`${name},${email},${tel}, ${message}`));
+	// dispatch(updateField({user}));
+
     console.log(`name: ${name} , email: ${email}, tel: ${tel}, message: ${message}`);
+	setName ('');
+	setEmail ('');
+	setTel ('');
+	setMessage ('');
    }
 
 
@@ -59,22 +67,15 @@ const Contacts = () => {
 
     
         <form className={style.form2}  onSubmit={handleSubmit}>
-
-			<input placeholder="Ваше имя" type="text" name="name" value={name} onChange={handleChange} required />
-			<input placeholder="Ваш email" type="email" name="email" value={email} onChange={handleChange} />
-			<input placeholder="Ваш телефон" type="tel" name="tel" value={tel} onChange={handleChange} required/>
-			<textarea placeholder="Ваше сообщение" name="message" value={message} onChange={handleChange} required/>
+			<input placeholder="Ваше имя" type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} required />
+			<input placeholder="email" type="email" name="email"  value={email} onChange={(e) => setEmail(e.target.value)} />
+			<input placeholder="Номер телефона" type="text" name="tel" pattern="[0-9]*"  value={tel} onChange={(e) => setTel(e.target.value)} required/>
+			<textarea placeholder="Текст сообщения" name="message" value={message} onChange={(e) => setMessage(e.target.value)} required/>
 			<button className={style.button} type="submit" disabled={submitting}>Отправить</button>
 			{submitted && <p>Thank you</p>}
 			{error && <p>{error}</p>}
 
-            {/* <label>Закажите обратный звонок</label>
-            <input
-            value={feedback}
-            onChange={(e) => setFeedback(e.target.value)}
-            placeholder="Enter"
-            />
-            <button className={style.button} type="submit">Submit</button> */}
+           
         </form>
     </div>
    </>

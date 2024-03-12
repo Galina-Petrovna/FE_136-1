@@ -1,0 +1,28 @@
+
+
+.images {
+    display: flex;
+
+    /* align-items: center; */
+    /* height: 100vh; */
+
+    gap: 20px;
+    flex-wrap: wrap;
+    /* transition: 0.5s; */
+    
+}  
+
+.img {
+    height: 200px;
+    width: 300px;
+    cursor: pointer;
+
+    transition: transform 0.5s;
+    /* transition:  1s; */
+}
+
+
+
+
+
+

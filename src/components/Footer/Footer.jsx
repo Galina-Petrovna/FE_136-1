@@ -68,7 +68,6 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* <Map1/> */}
 
             <Outlet/>
         </>
