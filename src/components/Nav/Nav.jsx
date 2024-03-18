@@ -22,6 +22,7 @@ const Nav = () => {
             <NavLink to='/'>Главная</NavLink>
             <NavLink to="/vet">Ветеринария</NavLink>
             <NavLink to="/learn">Прокат лошадей</NavLink>
+            <NavLink to="/photo">Фотогалерея</NavLink>
             <NavLink to="/contacts">Контакты</NavLink>
 
 

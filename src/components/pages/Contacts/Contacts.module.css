@@ -8,6 +8,16 @@
 
 .button {
     display: block;
+    background-color: rgb(66, 233, 66);
+    height: 35px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: green;
 }
 
 .h1 {
@@ -15,9 +25,39 @@
 }
 
 .form2 {
-    width: 300px;
-    gap: 15px;
+    width: 320px;
     display: flex;
     flex-direction: column;
     text-align: center;
+   
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+}
+
+.p {
+    font-size: 20px;
+    text-align: start;
+    margin: 0 0 10px 0;
+}
+
+.info {
+    display: flex;
+    gap: 15px;
+}
+
+input {
+    background-color: rgb(221, 210, 210);
+    border: none;
+    height: 35px;
+}
+
+textarea {
+    height: 50px;
+    background-color: rgb(221, 210, 210);
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }

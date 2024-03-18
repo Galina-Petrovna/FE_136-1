@@ -6,6 +6,7 @@ import Home from './components/pages/Home/Home';
 import Vet from './components/pages/Vet/Vet';
 import Learn from './components/pages/Learn/Learn';
 import Contacts from './components/pages/Contacts/Contacts';
+import Photo from './components/pages/Photo/Photo';
 
 
 
@@ -30,10 +31,12 @@ const router = createBrowserRouter ([
         path: '/learn',
         element: <Learn />,
       },
-      // {
-      //   path: '/games/write-it',
-      //   element: <WriteIt />,
-      // },
+
+      {
+        path: '/photo',
+        element: <Photo />,
+      },
+     
 
       {
         path: '/contacts',

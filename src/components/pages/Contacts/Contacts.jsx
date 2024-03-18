@@ -67,9 +67,19 @@ const Contacts = () => {
 
     
         <form className={style.form2}  onSubmit={handleSubmit}>
-			<input placeholder="Ваше имя" type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} required />
-			<input placeholder="email" type="email" name="email"  value={email} onChange={(e) => setEmail(e.target.value)} />
-			<input placeholder="Номер телефона" type="text" name="tel" pattern="[0-9]*"  value={tel} onChange={(e) => setTel(e.target.value)} required/>
+			<div className={style.name}>
+				<p className={style.p}>Представьтесь, пожалуйста</p>
+				<input placeholder="Иванов Иван Иванович" type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} required />
+			</div>
+
+			<p className={style.p}>Контактная информация</p>
+			
+			<div className={style.info}>
+				
+				<input placeholder="email" type="email" name="email"  value={email} onChange={(e) => setEmail(e.target.value)} />
+				<input placeholder="Номер телефона" type="text" name="tel" pattern="[0-9]*"  value={tel} onChange={(e) => setTel(e.target.value)} required/>
+			</div>
+			
 			<textarea placeholder="Текст сообщения" name="message" value={message} onChange={(e) => setMessage(e.target.value)} required/>
 			<button className={style.button} type="submit" disabled={submitting}>Отправить</button>
 			{submitted && <p>Thank you</p>}

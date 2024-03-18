@@ -45,7 +45,7 @@ const Gallery = () => {
             ))}
 
             {zoomed && (
-                <div style={{position:'fixed',  top:'50px', left:0, right:0, bottom:0,  background: 'rgba(0, 0, 0, 0.7'}}>
+                <div style={{position:'fixed',  top:'50px', left:0, right:0, bottom:0, zIndex:'2',  background: 'rgba(0, 0, 0, 0.7' }}>
                 <img src={zoomed} alt="Zoomed" 
                 style={{width:'500px', height:'400px', position:'absolute',  top:'50%', left:'50%', cursor: 'pointer', transform:'translate(-50%, -50%)'}}
                 onClick={handleCloseModal}
