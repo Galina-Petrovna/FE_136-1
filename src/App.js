@@ -8,24 +8,22 @@ import Learn from './components/pages/Learn/Learn';
 import Contacts from './components/pages/Contacts/Contacts';
 import Photo from './components/pages/Photo/Photo';
 
-import i18next from'i18next'
+// import i18next from'i18next'
 
-i18next
-.init({
-  resources:{
-      en:{
-        en:require('./locales/en/translation.json')
-        // "text": "This"
-      },
-      ru:{
-        ru:require('./locales/ru/translation.json')
-        // "text": "Это"
-      }
+// i18next
+// .init({
+//   resources:{
+//       en:{
+//         en:require('./locales/en/translation.json')
+//       },
+//       ru:{
+//         ru:require('./locales/ru/translation.json')
+//       }
    
-  },
-  lng:'ru',
-  fallbackLng:'ru'
-});
+//   },
+//   lng:'ru',
+//   fallbackLng:'ru'
+// });
 
 const router = createBrowserRouter (
   

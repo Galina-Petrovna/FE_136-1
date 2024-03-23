@@ -1,17 +1,4 @@
 .header {
-                    /* display: grid; */
-    /* width: 100%; */
-                    /* grid-auto-flow: column; */
-    /* justify-content: space-between;
-    align-items: left;
-    background-color:brown;
-    padding: 0 12px;
-    box-sizing: border-box;
-    align-items: center;
-
-    display: flex; */
-
-
     position: fixed;
     left: 0;
     top: 0;
@@ -35,11 +22,6 @@
 button {
     display: none;
 }
-
-.button {
-    display: block;
-}
-
 
 .img {
     

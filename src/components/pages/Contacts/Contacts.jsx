@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import {useDispatch, useSelector} from 'react-redux';
 import style from "./Contacts.module.css";
+import {useTranslation} from 'react-i18next';
 
 
 import { updateField } from "../../../store/reducers/userReducer";
@@ -16,6 +17,9 @@ const Contacts = () => {
 	const [email, setEmail] = useState ('');
 	const [tel, setTel] = useState ('');
 	const [message, setMessage] = useState ('');
+
+	const {t}=useTranslation();
+
 
 	// const handleChange = (e) => {
 	// 	dispatch(updateField({name, email, tel}));
@@ -36,52 +40,29 @@ const Contacts = () => {
 	setMessage ('');
    }
 
-
-	// const { users, loading, error } = useSelector((state) => state.user);
-	// const dispatch = useDispatch();
-	// const { addUserAction, removeUserAction, addAsyncUsers } = useActions();
-
-
-
-	// const addUser = (name) => {
-	// 	const user = {
-	// 		name: {
-	// 			firstname: name,
-	// 		},
-	// 		id: Date.now(),
-	// 	};
-	// 	addUserAction([user]);
-	// };
-
-	// const removeUser = (id) => {
-	// 	removeUser(id);
-	// };
-
-
 	return (
-
     <>
 
     <div className={style.form} >
-        <h1 className={style.h1}>Закажите обратный звонок</h1>
+        <h1 className={style.h1}>{t("contact1")}</h1>
 
     
         <form className={style.form2}  onSubmit={handleSubmit}>
 			<div className={style.name}>
-				<p className={style.p}>Представьтесь, пожалуйста</p>
-				<input placeholder="Иванов Иван Иванович" type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} required />
+				<p className={style.p}>{t("contact2")}</p>
+				<input placeholder={t("contact3")} type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} required />
 			</div>
 
-			<p className={style.p}>Контактная информация</p>
+			<p className={style.p}>{t("contact4")}</p>
 			
 			<div className={style.info}>
 				
 				<input placeholder="email" type="email" name="email"  value={email} onChange={(e) => setEmail(e.target.value)} />
-				<input placeholder="Номер телефона" type="text" name="tel" pattern="[0-9]*"  value={tel} onChange={(e) => setTel(e.target.value)} required/>
+				<input placeholder={t("contact5")} type="text" name="tel" pattern="[0-9]*"  value={tel} onChange={(e) => setTel(e.target.value)} required/>
 			</div>
 			
-			<textarea placeholder="Текст сообщения" name="message" value={message} onChange={(e) => setMessage(e.target.value)} required/>
-			<button className={style.button} type="submit" disabled={submitting}>Отправить</button>
+			<textarea placeholder={t("contact6")} name="message" value={message} onChange={(e) => setMessage(e.target.value)} required/>
+			<button className={style.button} type="submit" disabled={submitting}>{t("contact7")}</button>
 			{submitted && <p>Thank you</p>}
 			{error && <p>{error}</p>}
 
