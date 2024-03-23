@@ -16,6 +16,7 @@
     text-transform: uppercase;
 }
 
+
 @media (max-width: 768px) {
     .nav {
         display: none;
