@@ -7,12 +7,13 @@ import {useTranslation} from 'react-i18next';
 
 
 
+
 const Home = () => {
 
     const {t}=useTranslation();
     return (
         <div className={style.container}>
-            <h3 className={style.h3}>{t("hello")}</h3>
+            <h3 className={style.h3}>{t("header.hello")}</h3>
             
             <Slider/>
 

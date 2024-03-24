@@ -23,7 +23,7 @@ const Header = () => {
             <header className={style.header}>
                 
                 <img  className={style.img} src={Logo} alt="" />
-                <p className={style.p}>{t("hello")}</p>
+                <p className={style.p}>{t("header.hello")}</p>
                 <Nav />
 
                 <LanguageSwitcher/>

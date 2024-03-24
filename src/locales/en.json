@@ -1,5 +1,8 @@
 {
-    "hello": "equestrian club «Zvezdny»",
+    "header": {
+        "hello": "equestrian club «Zvezdny»"
+    },    
+   
 
     "home": "Home",
     "home1": "The Zvezdny Equestrian Sports Complex is a new center of attraction for professional athletes, horse lovers, as well as everyone who cares about these beautiful and graceful animals.",
