@@ -19,15 +19,7 @@ const useLocalStorage = (key, defaultValue) => {
             
         
     })
-
-    // const setValue = (newValue) =>{
-    //     try {
-    //         localStorage.setItem(key, JSON.stringify(newValue))
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
-    //     setStoredValue(newValue)
-    // }
+  
     return [storedValue, setStoredValue]
 }
 
