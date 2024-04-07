@@ -1,13 +1,10 @@
 import style from "./Vet.module.css";
-
 import Gallery from "../../Gallery/Gallery";
 import {useTranslation} from 'react-i18next';
-
 
 const Vet = () => {
     const {t}=useTranslation();
     
-
     return (
 
         <div className={style.container}>

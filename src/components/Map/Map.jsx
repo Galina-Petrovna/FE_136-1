@@ -1,14 +1,10 @@
 import React from "react";
-
 import L from 'leaflet';
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-
 import 'leaflet/dist/leaflet.css';
 import style from "./Map.module.css";
 
-
 L.Icon.Default.imagePath = "https://unpkg.com/leaflet@1.5.0/dist/images/";
-
 
 const Map1 = () => {
 

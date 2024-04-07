@@ -31,7 +31,6 @@
     .nav.active {
         transform: translate(100%);
     }
-
 }
 
 @media (min-width: 768px) {

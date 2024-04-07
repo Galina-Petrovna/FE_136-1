@@ -7,7 +7,6 @@ import V4 from "../../assets/img/V4.jpg";
 import V5 from "../../assets/img/V5.jpg";
 import V6 from "../../assets/img/V6.jpg";
 
-
 const Gallery = () => {
 
     const images = [
@@ -17,7 +16,6 @@ const Gallery = () => {
         V4,
         V5,
         V6
-
     ];
     const [zoomed, setZoomed] = useState(null);
 
@@ -29,7 +27,6 @@ const Gallery = () => {
         setZoomed(null);
     };
     
-
     return (
 
         <div className={style.images}>
@@ -40,7 +37,6 @@ const Gallery = () => {
                 src={image}
                 alt={`Image ${index + 1}`}
                 onClick={() => toogleZoom(index)}
-                
                 />
             ))}
 
@@ -50,11 +46,9 @@ const Gallery = () => {
                 style={{width:'500px', height:'400px', position:'absolute',  top:'50%', left:'50%', cursor: 'pointer', transform:'translate(-50%, -50%)'}}
                 onClick={handleCloseModal}
                 />
-                
                 </div>
         )}
        </div>
-
     );
 };
 

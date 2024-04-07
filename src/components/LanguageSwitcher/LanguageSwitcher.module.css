@@ -1,23 +1,13 @@
-
-
 .button {
     display: block;
     cursor: pointer;
     margin-left: 10px;
     background: brown;
     border: none;
-    /* color: rgb(199, 197, 111); */
-    /* font-size: 16px;
-    text-transform: uppercase; */
-    /* width: 35px;
-    height: 27px; */
-
-
 }
 
 .img {
     width: 30px;
     height: 25px;
-    
 }
 

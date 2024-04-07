@@ -9,7 +9,6 @@ const Photo = () => {
     const [photos, setPhoto] = useState([]);
     const {t}=useTranslation();
 
-
     useEffect(() => {
         
             axios.get(
@@ -22,7 +21,6 @@ const Photo = () => {
             .catch(error => {
                 console.log(error);
             })
-            // setPhoto(resp.data);
             setLoading(false);
         
     }, []);
@@ -41,7 +39,6 @@ const Photo = () => {
                             </div>
                         ))}
                     </div>
-                   
                 </>
             )
 

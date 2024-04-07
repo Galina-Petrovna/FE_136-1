@@ -13,20 +13,14 @@
 
     justify-content: space-between;
     box-sizing: border-box;
-    
-    
-
 }
-
 
 button {
     display: none;
 }
 
 .img {
-    
     width: 60px;
-    /* height: 50px; */
 }
 .p {
     color: black;
@@ -49,7 +43,6 @@ button {
 
 @media (max-width: 768px) {
     .header {
-        /* padding: 0 10px; */
         height: 60px;
     }
 
@@ -57,12 +50,9 @@ button {
         width: 50px;
     }
 
-
     button {
         display: block;
-        
     }
-
 
     .button {
         display: block;
@@ -76,6 +66,4 @@ button {
     button.active {
         transform: translate(100%);
     }
-
-    
 }

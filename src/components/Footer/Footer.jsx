@@ -4,11 +4,8 @@ import style from "./Footer.module.css";
 import Map1 from "../Map/Map";
 import {useTranslation} from 'react-i18next';
 
- 
-
 const Footer = () => {
     const {t}=useTranslation();
-
     return (
         <>
             <div className={style.row}>
@@ -72,10 +69,8 @@ const Footer = () => {
                 </div>
             </div>
 
-
             <Outlet/>
         </>
-
     );
 }
 

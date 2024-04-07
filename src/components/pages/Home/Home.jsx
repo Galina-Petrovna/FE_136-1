@@ -5,9 +5,6 @@ import Home2 from "../../../assets/img/fone-main.jpg";
 import Slider from "../../Slider/Slider";
 import {useTranslation} from 'react-i18next';
 
-
-
-
 const Home = () => {
 
     const {t}=useTranslation();
@@ -17,7 +14,6 @@ const Home = () => {
             
             <Slider/>
 
-            
             <h5>{t("home1")}</h5>
 
             <div className={style.main}>

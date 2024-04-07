@@ -1,14 +1,10 @@
 .nav {
-
     display: flex;
     gap: 60px;
-
     margin-left: auto;
-
 }
 
 .nav a {
-    /* position: relative; */
     color: rgb(199, 197, 111);
     text-decoration: none;
     font-weight: 500;

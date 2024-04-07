@@ -5,11 +5,3 @@ export const addUserAction = (payload) => {
         dispatch({type: userActions.ADD_USER, payload})
     }
 }
-
-// export const removeUserAction = (payload) => {
-//     return (dispatch) => {
-//         dispatch({type: userActions.REMOVE_USER, payload});
-//     }
-// }
-
-
