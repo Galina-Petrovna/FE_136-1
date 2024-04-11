@@ -12,6 +12,22 @@
     text-transform: uppercase;
 }
 
+@media (max-width:1015px) {
+    .nav {
+        gap: 40px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 850px) {
+    .nav {
+        gap: 20px;
+    }
+}
+
 
 @media (max-width: 768px) {
     .nav {
