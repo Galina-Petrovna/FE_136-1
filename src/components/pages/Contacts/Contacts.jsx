@@ -12,7 +12,6 @@ const Contacts = () => {
 	const [isValid, setIsValid] = useState(true);
 
 	const [email, setEmail] = useState ('');
-
 	
 	const [tel, setTel] = useState ('');
 	const [message, setMessage] = useState ('');
@@ -27,29 +26,22 @@ const Contacts = () => {
 	   const validateName = /^[a-zA-Zа-яёА-ЯЁ\s\n]{3,40}$/g;
 	   const validateMessage = /^[a-zA-Zа-яёА-ЯЁ\s\n]{10,300}$/g;
 
-
 	   if (!validateName.test(name)){
 		setIsValid(false);
 
 		return;
-		
 	}
-
 
 	if ( !validateMessage.test(message)){
 		setIsValidMes(false);
 
 		return;
-
 	}
 
 	setIsValid(true);
 	setIsValidMes(true);
 
-
 	dispatch(updateField(`${name},${email},${tel}, ${message}`));
-
-	
 
     console.log(`name: ${name} , email: ${email}, tel: ${tel}, message: ${message}`);
 	setName ('');
@@ -57,16 +49,7 @@ const Contacts = () => {
 	setTel ('');
 	setMessage ('');
 
-	// if (!validateEmail(email)){
-	// 	alert('Неверный формат email');
-	// 	return;
-	// }
    }
-
-//    const validateEmail = (email) => {
-// 	const re = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
-// 	return re.test(email);
-//    }
 
 	return (
     <>
@@ -97,7 +80,6 @@ const Contacts = () => {
 			
 			<textarea placeholder={t("contact6")} name="message" value={message} onChange={(e) => setMessage(e.target.value)} required/>
 			{!isValidMes && <div style={{color:'red', fontSize: '12px'}}>min 10 max 300 символов </div>}
-
 
 			<button className={style.button} type="submit" disabled={submitting}>{t("contact7")}</button>
 			{submitted && <p>Thank you</p>}

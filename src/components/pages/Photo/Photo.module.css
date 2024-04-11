@@ -14,20 +14,10 @@
     width: 300px;
 }
 
-.img:hover {
-    cursor: pointer;
-    width: 350px;
-    border-radius: 10%;
-    transition: 0.5s;
-}
-
 @media (max-width: 768px) {
 
     .img {
         width: 200px;
     }
 
-    .img:hover {
-        width: 250px;
-    }
 }
